@@ -24,4 +24,8 @@ class ShoeColors extends Model
     {
         return $this->belongsTo(Color::class);
     }
+
+    public function activityLog(){
+        return $this->hasMany(ActivityLog::class);
+    }
 }

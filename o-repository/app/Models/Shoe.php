@@ -12,11 +12,12 @@ class Shoe extends Model
     use HasFactory;
 
     protected $fillable = [
+       'model_id',
         'shoe_number',
         'image'
     ];
 
-    public function models(): BelongsTo
+    public function moodel(): BelongsTo
     {
         return $this->belongsTo(Moodel::class);
     }

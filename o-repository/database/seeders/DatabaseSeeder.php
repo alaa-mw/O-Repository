@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
             ColorSeeder::class,
             ShoeSeeder::class,
             ShoeColorsSeeder::class,
+            RoleSeeder::class,
+            ActivityLogSeeder::class,
         ]);
 
     }

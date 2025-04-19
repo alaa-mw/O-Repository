@@ -13,7 +13,11 @@ class ColorController extends Controller
      */
     public function index()
     {
-        //
+        $colors =Color::get();
+
+        return response()->json([
+            'data' => $colors
+        ],200) ;
     }
 
     /**

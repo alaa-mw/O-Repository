@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -19,7 +20,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insertGetId([
             'name' => "osama",
             'phone_number' => '0900000007',
-            'password' => "12345678",
+            'password' => Hash::make('12345678'),
             'created_at' => $date,
             'updated_at' => $date,
         ]);
