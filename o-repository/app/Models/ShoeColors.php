@@ -10,6 +10,8 @@ class ShoeColors extends Model
     use HasFactory;
 
     protected $fillable = [
+        'shoe_id',
+        'color_id',
         'avaliable_amount',
         'sold_amount',
         'total_amount'

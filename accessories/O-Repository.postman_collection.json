@@ -10,6 +10,830 @@
 			"name": "admin",
 			"item": [
 				{
+					"name": "models",
+					"item": [
+						{
+							"name": "list-models",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/list-models",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"list-models"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list-models",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8000/api/admin/list-models",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"list-models"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 10 Apr 2025 04:32:27 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 10 Apr 2025 04:32:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.4"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "56"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"model_number\": \"M001\",\n            \"image\": null,\n            \"created_at\": \"2025-03-26T04:16:34.000000Z\",\n            \"updated_at\": \"2025-03-26T04:16:34.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"model_number\": \"M002\",\n            \"image\": null,\n            \"created_at\": \"2025-03-27T04:16:34.000000Z\",\n            \"updated_at\": \"2025-03-27T04:16:34.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"model_number\": \"M003\",\n            \"image\": null,\n            \"created_at\": \"2025-03-23T04:16:34.000000Z\",\n            \"updated_at\": \"2025-03-23T04:16:34.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"model_number\": \"M004\",\n            \"image\": null,\n            \"created_at\": \"2025-03-22T04:16:34.000000Z\",\n            \"updated_at\": \"2025-03-22T04:16:34.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "add-model",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "model_number",
+											"value": "1108s",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Lenovo/Downloads/Serene Coastal Pastels – Marka Works Branding Agency.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/add-model",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"add-model"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "shoes",
+					"item": [
+						{
+							"name": "list-shoes-of-model",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/list-shoes-of-model",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"list-shoes-of-model"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list-shoes-of-model",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "id",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/admin/list-shoes-of-model",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"list-shoes-of-model"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 10 Apr 2025 04:32:05 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 10 Apr 2025 04:32:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.4"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "57"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"model_id\": 1,\n            \"shoe_number\": \"SN003\",\n            \"image\": null,\n            \"created_at\": \"2025-03-20T04:16:34.000000Z\",\n            \"updated_at\": \"2025-03-20T04:16:34.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"model_id\": 1,\n            \"shoe_number\": \"SN001\",\n            \"image\": null,\n            \"created_at\": \"2025-03-24T04:16:34.000000Z\",\n            \"updated_at\": \"2025-03-24T04:16:34.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "add-shoe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "model_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "shoe_number",
+											"value": "15",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Lenovo/Downloads/Disease prevention app _ Landing page.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/add-shoe",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"add-shoe"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "shoe_colors",
+					"item": [
+						{
+							"name": "list-colors-of-shoe",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/list-colors-of-shoe",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"list-colors-of-shoe"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list-colors",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/list-colors",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"list-colors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "produce",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"shoe_id\": 1,\r\n    \"items\": [\r\n      { \"color_id\": 1, \"avaliable_amount\": 10 },\r\n      { \"color_id\": 6, \"avaliable_amount\": 15 }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/produce",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"produce"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \r\n    \"shoe_id\": 1,\r\n    \"items\": [\r\n      { \"color_id\": 1, \"avaliable_amount\": 10 },\r\n      { \"color_id\": 6, \"avaliable_amount\": 15 }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/admin/produce",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"produce"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 11:48:58 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 11:48:58 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.4"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Production recorded successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "sale",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"shoe_id\": 1,\r\n    \"items\": [\r\n      { \"color_id\": 1, \"sold_amount\": 1 },\r\n      { \"color_id\": 6, \"sold_amount\": 1 }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/sale",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"sale"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \r\n    \"shoe_id\": 1,\r\n    \"items\": [\r\n      { \"color_id\": 1, \"sold_amount\": 1 },\r\n      { \"color_id\": 6, \"sold_amount\": 1 }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/admin/sale",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"sale"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 11:51:57 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 11:51:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.4"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Sale recorded successfully\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "logs",
+					"item": [
+						{
+							"name": "list-activity-log",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/admin/list-activity-log",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"list-activity-log"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "list-colors Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:8000/api/admin/list-activity-log",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"list-activity-log"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:14:59 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 21 Apr 2025 12:14:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.4"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"type\": \"production\",\n        \"shoe_color_id\": 2,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-15T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-15T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 2,\n        \"type\": \"production\",\n        \"shoe_color_id\": 1,\n        \"user_id\": 1,\n        \"quantity\": 8,\n        \"created_at\": \"2025-04-13T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-13T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 3,\n        \"type\": \"production\",\n        \"shoe_color_id\": 1,\n        \"user_id\": 1,\n        \"quantity\": 2,\n        \"created_at\": \"2025-04-16T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-16T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 4,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 6,\n        \"user_id\": 1,\n        \"quantity\": 8,\n        \"created_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 5,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 6,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 6,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 3,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 7,\n        \"type\": \"production\",\n        \"shoe_color_id\": 6,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 8,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 4,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 9,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 5,\n        \"user_id\": 1,\n        \"quantity\": 9,\n        \"created_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 10,\n        \"type\": \"production\",\n        \"shoe_color_id\": 4,\n        \"user_id\": 1,\n        \"quantity\": 9,\n        \"created_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 12,\n        \"type\": \"production\",\n        \"shoe_color_id\": 10,\n        \"user_id\": 1,\n        \"quantity\": 10,\n        \"created_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"updated_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 13,\n        \"type\": \"production\",\n        \"shoe_color_id\": 9,\n        \"user_id\": 1,\n        \"quantity\": 15,\n        \"created_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"updated_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 15,\n        \"type\": \"production\",\n        \"shoe_color_id\": 10,\n        \"user_id\": 1,\n        \"quantity\": 10,\n        \"created_at\": \"2025-04-21T11:17:02.000000Z\",\n        \"updated_at\": \"2025-04-21T11:17:02.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 16,\n        \"type\": \"production\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 15,\n        \"created_at\": \"2025-04-21T11:17:03.000000Z\",\n        \"updated_at\": \"2025-04-21T11:17:03.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 17,\n        \"type\": \"production\",\n        \"shoe_color_id\": 8,\n        \"user_id\": 1,\n        \"quantity\": 10,\n        \"created_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"updated_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 18,\n        \"type\": \"production\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 15,\n        \"created_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"updated_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 19,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 8,\n        \"user_id\": 1,\n        \"quantity\": 5,\n        \"created_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 20,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 21,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 8,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 22,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "login",
 					"request": {
 						"method": "POST",
@@ -20,32 +844,31 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "0900000007",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/admin/login",
+							"raw": "http://localhost:8000/api/admin-login",
 							"protocol": "http",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"localhost"
 							],
 							"port": "8000",
 							"path": [
 								"api",
-								"admin",
-								"login"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": null,
-									"disabled": true
-								},
-								{
-									"key": "",
-									"value": null,
-									"disabled": true
-								}
+								"admin-login"
 							]
 						}
 					},

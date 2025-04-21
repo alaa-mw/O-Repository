@@ -9,7 +9,7 @@ class ActivityLogController extends Controller
 {
     public function index()
     {
-        return ActivityLog::with(['user', 'shoe_colors'])->get();
+        return ActivityLog::with(['user', 'shoeColors'])->get();
     }
 
 }

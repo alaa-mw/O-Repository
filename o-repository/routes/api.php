@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\ActivityLogController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\MoodelController;
 use App\Http\Controllers\ShoeColorsController;
 use App\Http\Controllers\ShoeController;
+use App\Models\ActivityLog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,6 +42,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:admin'
     Route::controller(ShoeColorsController::class)->group(function () {
 
         Route::post('list-colors-of-shoe', 'getColorsOfShoe');
+        Route::post('produce', 'produce');
+        Route::post('sale', 'sale');
+
     });
 
 
@@ -47,4 +52,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:admin'
 
         Route::get('list-colors', 'index');
     });
+
+    Route::controller(ActivityLogController::class)->group(function () {
+
+        Route::get('list-activity-log', 'index');
+    });
+
 });

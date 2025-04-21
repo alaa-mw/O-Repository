@@ -8,11 +8,14 @@ use App\Http\Requests\UpdateShoeColorsRequest;
 use App\Models\ActivityLog;
 use App\Models\Color;
 use App\Models\Shoe;
+use App\Traits\createActivityLog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ShoeColorsController extends Controller
 {
+
+    use createActivityLog;
 
     public function getColorsOfShoe(Request $request)
     {
@@ -40,10 +43,11 @@ class ShoeColorsController extends Controller
 
     public function produce(Request $request)
     {
+
         $request->validate([
             'shoe_id' => 'required|exists:shoes,id',
-            'items' => 'required|array|min:1',
-            'items.*.color_id' => 'required|exists:colors,id',
+            // 'items' => 'required|array|min:1',
+            'items.*.color_id' => 'required|exists:shoe_colors,id',
             'items.*.avaliable_amount' => 'required|integer|min:0',
         ]);
 
@@ -84,7 +88,6 @@ class ShoeColorsController extends Controller
 
             return response()->json([
                 'message' => 'Production recorded successfully',
-                'data' => $results
             ], 200);
         } catch (\Exception $exception) {
             DB::rollBack();
@@ -144,8 +147,8 @@ class ShoeColorsController extends Controller
 
             return response()->json([
                 'message' => 'Sale recorded successfully',
-                'data' => $results
             ], 200);
+            
         } catch (\Exception $exception) {
             DB::rollBack();
 
@@ -157,45 +160,5 @@ class ShoeColorsController extends Controller
                 'message' => 'Error processing sale: ' . $exception->getMessage(),
             ], $statusCode);
         }
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreShoeColorsRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(ShoeColors $shoeColors)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(ShoeColors $shoeColors)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateShoeColorsRequest $request, ShoeColors $shoeColors)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(ShoeColors $shoeColors)
-    {
-        //
     }
 }
