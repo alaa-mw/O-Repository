@@ -12,7 +12,7 @@ class Shoe extends Model
     use HasFactory;
 
     protected $fillable = [
-       'model_id',
+       'moodel_id',
         'shoe_number',
         'image'
     ];

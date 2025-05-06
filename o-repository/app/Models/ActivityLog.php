@@ -17,7 +17,7 @@ class ActivityLog extends Model
         'details',
     ];
 
-    public function shoeColors()
+    public function shoeColor()
     {
         return $this->belongsTo(ShoeColors::class);
     }

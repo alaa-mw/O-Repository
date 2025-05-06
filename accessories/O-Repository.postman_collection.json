@@ -381,7 +381,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"value": "{{token}}",
 											"type": "string"
 										}
 									]
@@ -728,7 +728,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "1|gBPjSapH5KfEyp3X1W3M32ISmk5Z5EVSlr2RS1TB75b1a368",
+											"value": "{{token}}",
 											"type": "string"
 										}
 									]
@@ -757,7 +757,7 @@
 							},
 							"response": [
 								{
-									"name": "list-colors Copy",
+									"name": "list-activity-log",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -791,11 +791,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Mon, 21 Apr 2025 12:14:59 GMT"
+											"value": "Tue, 06 May 2025 19:13:09 GMT"
 										},
 										{
 											"key": "Date",
-											"value": "Mon, 21 Apr 2025 12:14:59 GMT"
+											"value": "Tue, 06 May 2025 19:13:09 GMT"
 										},
 										{
 											"key": "Connection",
@@ -827,7 +827,138 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n    {\n        \"id\": 1,\n        \"type\": \"production\",\n        \"shoe_color_id\": 2,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-15T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-15T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 2,\n        \"type\": \"production\",\n        \"shoe_color_id\": 1,\n        \"user_id\": 1,\n        \"quantity\": 8,\n        \"created_at\": \"2025-04-13T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-13T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 3,\n        \"type\": \"production\",\n        \"shoe_color_id\": 1,\n        \"user_id\": 1,\n        \"quantity\": 2,\n        \"created_at\": \"2025-04-16T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-16T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 4,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 6,\n        \"user_id\": 1,\n        \"quantity\": 8,\n        \"created_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 5,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 6,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 6,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 3,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-10T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 7,\n        \"type\": \"production\",\n        \"shoe_color_id\": 6,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 8,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 4,\n        \"user_id\": 1,\n        \"quantity\": 3,\n        \"created_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-14T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 9,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 5,\n        \"user_id\": 1,\n        \"quantity\": 9,\n        \"created_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 10,\n        \"type\": \"production\",\n        \"shoe_color_id\": 4,\n        \"user_id\": 1,\n        \"quantity\": 9,\n        \"created_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"updated_at\": \"2025-04-12T00:09:29.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 12,\n        \"type\": \"production\",\n        \"shoe_color_id\": 10,\n        \"user_id\": 1,\n        \"quantity\": 10,\n        \"created_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"updated_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 13,\n        \"type\": \"production\",\n        \"shoe_color_id\": 9,\n        \"user_id\": 1,\n        \"quantity\": 15,\n        \"created_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"updated_at\": \"2025-04-21T11:11:04.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 15,\n        \"type\": \"production\",\n        \"shoe_color_id\": 10,\n        \"user_id\": 1,\n        \"quantity\": 10,\n        \"created_at\": \"2025-04-21T11:17:02.000000Z\",\n        \"updated_at\": \"2025-04-21T11:17:02.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 16,\n        \"type\": \"production\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 15,\n        \"created_at\": \"2025-04-21T11:17:03.000000Z\",\n        \"updated_at\": \"2025-04-21T11:17:03.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 17,\n        \"type\": \"production\",\n        \"shoe_color_id\": 8,\n        \"user_id\": 1,\n        \"quantity\": 10,\n        \"created_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"updated_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 18,\n        \"type\": \"production\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 15,\n        \"created_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"updated_at\": \"2025-04-21T11:48:58.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 19,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 8,\n        \"user_id\": 1,\n        \"quantity\": 5,\n        \"created_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 20,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:50:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 21,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 8,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    },\n    {\n        \"id\": 22,\n        \"type\": \"sale\",\n        \"shoe_color_id\": 16,\n        \"user_id\": 1,\n        \"quantity\": 1,\n        \"created_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"updated_at\": \"2025-04-21T11:51:57.000000Z\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"osama\",\n            \"email\": null,\n            \"phone_number\": \"0900000007\",\n            \"role\": null,\n            \"email_verified_at\": null,\n            \"created_at\": \"2025-04-06T00:09:26.000000Z\",\n            \"updated_at\": \"2025-04-06T00:09:26.000000Z\"\n        },\n        \"shoe_colors\": null\n    }\n]"
+									"body": "{\n    \"production_logs\": [\n        {\n            \"id\": 1,\n            \"type\": \"production\",\n            \"shoe_color_id\": 5,\n            \"user_id\": 1,\n            \"quantity\": 8,\n            \"created_at\": \"2025-05-01\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 3,\n                    \"name\": \"Black\",\n                    \"hexa\": \"#000000\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN001\",\n                    \"moodel\": {\n                        \"model_number\": \"M001\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 3,\n            \"type\": \"production\",\n            \"shoe_color_id\": 6,\n            \"user_id\": 1,\n            \"quantity\": 4,\n            \"created_at\": \"2025-05-01\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 4,\n                    \"name\": \"Pink\",\n                    \"hexa\": \"#FFCAFB\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN001\",\n                    \"moodel\": {\n                        \"model_number\": \"M002\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 4,\n            \"type\": \"production\",\n            \"shoe_color_id\": 6,\n            \"user_id\": 1,\n            \"quantity\": 6,\n            \"created_at\": \"2025-04-27\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 4,\n                    \"name\": \"Pink\",\n                    \"hexa\": \"#FFCAFB\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN001\",\n                    \"moodel\": {\n                        \"model_number\": \"M002\"\n                    }\n                }\n            }\n        }\n    ],\n    \"sales_logs\": [\n        {\n            \"id\": 2,\n            \"type\": \"sale\",\n            \"shoe_color_id\": 6,\n            \"user_id\": 1,\n            \"quantity\": 1,\n            \"created_at\": \"2025-04-29\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 4,\n                    \"name\": \"Pink\",\n                    \"hexa\": \"#FFCAFB\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN001\",\n                    \"moodel\": {\n                        \"model_number\": \"M002\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 5,\n            \"type\": \"sale\",\n            \"shoe_color_id\": 5,\n            \"user_id\": 1,\n            \"quantity\": 8,\n            \"created_at\": \"2025-04-26\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 3,\n                    \"name\": \"Black\",\n                    \"hexa\": \"#000000\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN001\",\n                    \"moodel\": {\n                        \"model_number\": \"M001\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 6,\n            \"type\": \"sale\",\n            \"shoe_color_id\": 4,\n            \"user_id\": 1,\n            \"quantity\": 9,\n            \"created_at\": \"2025-04-30\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 4,\n                    \"name\": \"Pink\",\n                    \"hexa\": \"#FFCAFB\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN001\",\n                    \"moodel\": {\n                        \"model_number\": \"M001\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 7,\n            \"type\": \"sale\",\n            \"shoe_color_id\": 2,\n            \"user_id\": 1,\n            \"quantity\": 3,\n            \"created_at\": \"2025-04-26\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 1,\n                    \"name\": \"Red\",\n                    \"hexa\": \"#FF0000\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN003\",\n                    \"moodel\": {\n                        \"model_number\": \"M001\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 8,\n            \"type\": \"sale\",\n            \"shoe_color_id\": 6,\n            \"user_id\": 1,\n            \"quantity\": 3,\n            \"created_at\": \"2025-04-28\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 4,\n                    \"name\": \"Pink\",\n                    \"hexa\": \"#FFCAFB\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN001\",\n                    \"moodel\": {\n                        \"model_number\": \"M002\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 9,\n            \"type\": \"sale\",\n            \"shoe_color_id\": 2,\n            \"user_id\": 1,\n            \"quantity\": 10,\n            \"created_at\": \"2025-05-01\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 1,\n                    \"name\": \"Red\",\n                    \"hexa\": \"#FF0000\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN003\",\n                    \"moodel\": {\n                        \"model_number\": \"M001\"\n                    }\n                }\n            }\n        },\n        {\n            \"id\": 10,\n            \"type\": \"sale\",\n            \"shoe_color_id\": 2,\n            \"user_id\": 1,\n            \"quantity\": 9,\n            \"created_at\": \"2025-05-03\",\n            \"shoe_colors\": {\n                \"color\": {\n                    \"id\": 1,\n                    \"name\": \"Red\",\n                    \"hexa\": \"#FF0000\"\n                },\n                \"shoe\": {\n                    \"shoe_number\": \"SN003\",\n                    \"moodel\": {\n                        \"model_number\": \"M001\"\n                    }\n                }\n            }\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "filter-day-activity-log",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "day",
+											"value": "2025-04-26",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/filter-day-activity-log",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"filter-day-activity-log"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "filter-day-activity-log",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "day",
+													"value": "2025-04-26",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/admin/filter-day-activity-log",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"filter-day-activity-log"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "localhost:8000"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 06 May 2025 19:57:30 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 06 May 2025 19:57:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.4"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"production_logs\": [],\n        \"sales_logs\": [\n            {\n                \"id\": 5,\n                \"type\": \"sale\",\n                \"shoe_color_id\": 5,\n                \"user_id\": 1,\n                \"quantity\": 8,\n                \"created_at\": \"2025-04-26\",\n                \"shoe_colors\": {\n                    \"color\": {\n                        \"id\": 3,\n                        \"name\": \"Black\",\n                        \"hexa\": \"#000000\"\n                    },\n                    \"shoe\": {\n                        \"shoe_number\": \"SN001\",\n                        \"moodel\": {\n                            \"model_number\": \"M001\"\n                        }\n                    }\n                }\n            },\n            {\n                \"id\": 7,\n                \"type\": \"sale\",\n                \"shoe_color_id\": 2,\n                \"user_id\": 1,\n                \"quantity\": 3,\n                \"created_at\": \"2025-04-26\",\n                \"shoe_colors\": {\n                    \"color\": {\n                        \"id\": 1,\n                        \"name\": \"Red\",\n                        \"hexa\": \"#FF0000\"\n                    },\n                    \"shoe\": {\n                        \"shoe_number\": \"SN003\",\n                        \"moodel\": {\n                            \"model_number\": \"M001\"\n                        }\n                    }\n                }\n            }\n        ]\n    }\n}"
 								}
 							]
 						}
@@ -875,6 +1006,13 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "",
+			"type": "default"
 		}
 	]
 }

@@ -56,6 +56,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:admin'
     Route::controller(ActivityLogController::class)->group(function () {
 
         Route::get('list-activity-log', 'index');
+        Route::post('filter-day-activity-log', 'filterDayActLog');
     });
+
 
 });

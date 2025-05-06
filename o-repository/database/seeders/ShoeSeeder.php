@@ -24,7 +24,7 @@ class ShoeSeeder extends Seeder
 
             $shoeId = DB::table('shoes')->insertGetId([
                 'shoe_number' => $shoe['shoe_number'],
-                'model_id' => $shoe['model_id'],
+                'moodel_id' => $shoe['model_id'],
                 // 'image'=> $shoe['image'],
                 'created_at' => $date,
                 'updated_at' => $date,

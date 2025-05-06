@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('shoes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('model_id');
-            $table->foreign('model_id')->references('id')->on('moodels')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('moodel_id')->references('id')->on('moodels')->onUpdate('cascade')->onDelete('cascade');
             $table->string('shoe_number')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
