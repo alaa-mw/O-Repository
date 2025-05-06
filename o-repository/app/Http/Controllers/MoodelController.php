@@ -63,43 +63,18 @@ class MoodelController extends Controller
         }
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreMoodelRequest $request)
+
+    public function search(Request $request)
     {
-        //
+
+        $modelNumber = $request->model_number;
+
+        $models = Moodel::where('model_number', 'like', "%{$modelNumber}%")->get();
+
+        return response()->json([
+            'data' =>  $models
+        ], 200);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Moodel $moodel)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Moodel $moodel)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateMoodelRequest $request, Moodel $moodel)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Moodel $moodel)
-    {
-        //
-    }
 }

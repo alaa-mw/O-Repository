@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'role:admin'
 
         Route::get('list-models', 'index');
         Route::post('add-model', 'create');
+        Route::post('search-model', 'search');
     });
 
     Route::controller(ShoeController::class)->group(function () {
